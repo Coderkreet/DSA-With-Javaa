@@ -7,7 +7,6 @@ public class InsertionArray {
         int[] temp = new int[size+1];
         for (int i = 0; i < size; i++) {
            temp[i+1] = arr[i];
-
         }
         temp[0] = data;
 
@@ -21,6 +20,7 @@ public class InsertionArray {
         int arr[]= {1,2,3,4};
         int size = arr.length;
         int data = 23;
+        
       ArrayInsertionFirst(arr, size, data);
 
     }
