@@ -1,66 +1,20 @@
-#include <bits/stdc++.h>
-using namespace ::std;
+#include <iostream>
+using namespace std;
 
-vector<int> PrintWave(vector<vector<int>> v)
-{
-    int startCol = 0;
-    int startRow = 0;
-    int m = v.size();
-    int n = v[0].size();
-    int endRow = m - 1;
-    int endCol = n - 1;
-    vector<int> ans;
-    int total = m * n;
-    int count = 0;
+int main() {
+    long long n; // Number of friends
+    cin >> n;
 
-    while (count < total)
-    {
-        for (int i = startCol; i <= endCol; i++)
-        {
+    // Calculate the number of cakes
+    long long small_cakes = (n + 11) / 12; // Ceiling division
+    long long medium_cakes = (n + 15) / 16; // Ceiling division
+    long long large_cakes = (n + 29) / 30; // Ceiling division
 
-            ans.push_back(v[startRow][i]);
-            count++;
-        }
-        startRow++;
-        // endCol
+    // Calculate the total time
+    long long total_time = small_cakes * 30 + medium_cakes * 40 + large_cakes * 50;
 
-        for (int i =startRow ; i <=  endRow ; i++)
-        {
-           ans.push_back(v[i][endCol]); 
-           count++;
-        }
-        endCol--;
+    cout << "Minimum number of cakes: " << small_cakes + medium_cakes + large_cakes << endl;
+    cout << "Total time to cut cakes: " << total_time << " minutes" << endl;
 
-    // ending row
-
-        for (int i =endCol ; i >=startCol; i--)
-        {
-           ans.push_back(v[endRow][i]); 
-           count++;
-        }
-        endRow--;
-    // ending col
-
-        for (int i =endRow ; i >=startRow; i--)
-        {
-           ans.push_back(v[i][startCol]); 
-           count++;
-        }
-        startCol++;
-    }
-    return ans;
-}
-
-int main()
-{
-    vector<vector<int>> v{
-        {1, 2, 3},
-        {4, 5, 6},
-        {7, 8, 9}};
-    vector<int> ans = PrintWave(v);
-
-    for (int i = 0; i < ans.size(); i++)
-    {
-        cout << ans[i] << endl;
-    }
+    return 0;
 }
