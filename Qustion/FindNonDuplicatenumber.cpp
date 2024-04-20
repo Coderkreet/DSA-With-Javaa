@@ -25,44 +25,46 @@ using namespace ::std;
 // }
 // }
 
-void findNonDuplicate(vector<int>v){
+int findNonDuplicate(vector<int>v){
 
  int st = 0;
  int ed = v.size()-1;
-
- while (st<=ed)
+ while (st<ed)
  {
     int mid = st + (ed-st)/2;
 
-    if (st == ed)
+    if (st ==ed)
     {
-        cout<<st<<endl;
-       return;
+     return st;
     }
-    else if(mid%2 == 0)
+    
+if (mid %2 == 0)
+{
+    if (v[mid] ==  v[mid+1])
     {
-       if (v[mid] == v[mid+1])
-       {
-        st = mid +2;
-       }
-       else
-       {
-        ed = mid;
-       }
+        st = mid + 2;
     }
-    else
+    else 
     {
-        if (v[mid] == v[mid-1])
-        {
-            st = mid -1;
-        }
-        else{
-            ed = mid-1;
-        }
-        
+         ed = mid;
         
     }
- }
+}
+else
+{
+    if (v[mid-1] == v[mid])
+    {
+        st = mid+1;
+    }
+    else{
+        ed = mid-1;
+    }
+    
+}
+
+
+}
+cout<<st<<endl;
 }
 
 

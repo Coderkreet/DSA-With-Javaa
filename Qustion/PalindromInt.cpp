@@ -10,7 +10,6 @@ while (num)
 int lastdigit = num%10;
 firstDigit = firstDigit *10 +lastdigit;
 
-
 num = num/10;
 }
 
@@ -29,7 +28,7 @@ if (firstDigit == Number)
 }
 
 int main(){
-int num = 1141;
+int num = 1234567899;
 PlindromeInt(num);
 if(PlindromeInt(num)){
 
