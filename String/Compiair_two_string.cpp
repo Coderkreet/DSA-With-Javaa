@@ -9,24 +9,16 @@ void CopaireString(string s1 , string s2){
             continue;
         }
         
-        if (s1[i]+32 == s2[i] || s1[i]-32 == s2[i] || s1[i] == s2[i] || s2[i]+32 == s1[i] || s2[i]-32 == s1[i])
-        {
-           
-            
-        }
+        if (s1[i]+32 == s2[i] || s1[i]-32 == s2[i] || s1[i] == s2[i] || s2[i]+32 == s1[i] || s2[i]-32 == s1[i]);
+
         else
         {
             cout<<"Not_same";
             return;
         }
-        
     }
-
     cout<<"both are same"<<endl;
-
 }
-
-
 int main(){
 string s = "kreet";
 string s1 = "KrEet";

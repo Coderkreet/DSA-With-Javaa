@@ -8,13 +8,9 @@ void UpperscaseLatter(string s){
         {
             continue;
         }
-        
         s[i] -=32; 
-
     }
-
 cout<<s;
-    
 }
 int main(){
 string s = "kreet is a good boy";

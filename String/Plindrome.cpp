@@ -1,26 +1,23 @@
 #include <bits/stdc++.h>
 using namespace ::std;
 
-void ispalindrome(string s ){
+void isPalindrome(string s ){
 int st = 0;
 int ed = s.length()-1;
 while (st<=ed)
 {
     if(s[st] != s[ed]){
-        cout<<"Not_palindrome"<<endl;
+        cout<<"Not_Palindrome"<<endl;
         return;
     }
     st++;
     ed--;
+    
 }
-
-cout<<"Plindrome"<<endl;
-
+cout<<"Palindrome"<<endl;
 }
-
-
 int main(){
 string s = "oyo oyo";
 
-ispalindrome(s);
+isPalindrome(s);
 }

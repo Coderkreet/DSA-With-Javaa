@@ -11,12 +11,8 @@ while (st<= ed)
     st++;
     ed--;
 }
-
 cout<<n;
-
-
 }
-
 int main(){
 string name = "Kreet is a good boy";
 revesestr(name);
